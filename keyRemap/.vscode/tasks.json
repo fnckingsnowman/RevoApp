@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "cl.exe",
+        "args": [
+          "/Zi",
+          "/EHsc",
+          "/nologo",
+          "/I", "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um",
+          "/I", "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared",
+          "/I", "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt",
+          "/I", "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\include",
+          "/link",
+          "/LIBPATH:C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22621.0\\um\\x64",
+          "/LIBPATH:C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22621.0\\ucrt\\x64",
+          "/FeC:\\Users\\ttz03\\Desktop\\swapp3\\main.exe",
+          "C:\\Users\\ttz03\\Desktop\\swapp3\\main.cpp"  // Ensure this line correctly includes your source file
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$msCompile"]
+      }
+    ]
+  }
+  
