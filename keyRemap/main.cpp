@@ -5,15 +5,15 @@
 HHOOK keyboardHook;
 int f11Counter = 0;
 int f12Counter = 0;
-char f11OutputKey = 'G';
-char f12OutputKey = 'H';
+char f11OutputKey;
+char f12OutputKey;
 
 LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
     if (nCode >= 0 && wParam == WM_KEYDOWN) {
         KBDLLHOOKSTRUCT* kbStruct = (KBDLLHOOKSTRUCT*)lParam;
         if (kbStruct->vkCode == VK_F11) {
             f11Counter++;
-            if (f11Counter == 3) {
+            if (f11Counter == 12) {
                 // Reset counter
                 f11Counter = 0;
 
@@ -27,7 +27,7 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
                 input.ki.dwExtraInfo = 0;
                 SendInput(1, &input, sizeof(INPUT));
 
-                // Release the key
+                // Release the keygh
                 input.ki.dwFlags = KEYEVENTF_KEYUP; // for key release
                 SendInput(1, &input, sizeof(INPUT));
 
@@ -36,7 +36,7 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
             }
         } else if (kbStruct->vkCode == VK_F12) {
             f12Counter++;
-            if (f12Counter == 3) {
+            if (f12Counter == 12) {
                 // Reset counter
                 f12Counter = 0;
 

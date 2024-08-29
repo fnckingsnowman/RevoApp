@@ -16,8 +16,8 @@
           "/link",
           "/LIBPATH:C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22621.0\\um\\x64",
           "/LIBPATH:C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.22621.0\\ucrt\\x64",
-          "/FeC:\\Users\\ttz03\\Desktop\\swapp3\\main.exe",
-          "C:\\Users\\ttz03\\Desktop\\swapp3\\main.cpp"  // Ensure this line correctly includes your source file
+          "/FeC:\\Users\\ttz03\\Desktop\\revoapp\\keyRemap\\main.exe",
+          "C:\\Users\\ttz03\\Desktop\\revoapp\\keyRemap\\main.cpp"  // Ensure this line correctly includes your source file
         ],
         "group": {
           "kind": "build",
